@@ -3,11 +3,11 @@
 {
 "FROM":
 [
-"/DMO/TRAVEL"
+"/DMO/BOOKING"
 ],
 "ASSOCIATED":
 [
-"Z_I_BOOKING"
+"Z_I_TRAVEL"
 ],
 "BASE":
 [],

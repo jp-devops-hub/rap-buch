@@ -2,13 +2,9 @@
 "BASEINFO":
 {
 "FROM":
-[
-"/DMO/TRAVEL"
-],
+[],
 "ASSOCIATED":
-[
-"Z_I_BOOKING"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":

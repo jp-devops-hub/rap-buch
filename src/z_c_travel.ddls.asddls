@@ -9,7 +9,16 @@ define root view entity Z_C_TRAVEL
     type: #IDENTIFICATION_REFERENCE,
     label: 'Travel',
     position: 10
-  } ]
+  },
+  {
+    id:            'Booking',
+    purpose:       #STANDARD,
+    type:          #LINEITEM_REFERENCE,
+    label:         'Booking',
+    position:      15,
+    targetElement: '_Booking'
+  } 
+   ]
   @UI: { lineItem: [{ position: 10 }],
          identification: [{ position: 10 }],
          selectionField: [{ position: 10 }] }
@@ -17,7 +26,7 @@ define root view entity Z_C_TRAVEL
   @UI: { lineItem: [{ position: 20 }],
          identification: [{ position: 20 }] }
   AgencyId,
-  @UI: { lineItem: [{ position: 30 }],
+  @UI: { lineItem: [{ position: 30 },{ type: #FOR_ACTION, dataAction: 'countTravel', label: 'Count Travel' }],
          identification: [{ position: 30 }],
          selectionField: [{ position: 20 }] }
   CustomerId,
@@ -39,11 +48,13 @@ define root view entity Z_C_TRAVEL
   @UI: { lineItem: [{ position: 90 }],
          identification: [{ position: 90 }] }
   Description,
-  @UI: { lineItem: [{ position: 100 }],
+  @UI: { lineItem: [{ position: 100 },{ type: #FOR_ACTION, dataAction: 'cancelTravel', label: 'Cancel Travel' }],
          identification: [{ position: 100 }] }
   Status,
   Createdby,  
   Createdat,
   Lastchangedby,
-  Lastchangedat
+  Lastchangedat,
+  
+  _Booking : redirected to composition child Z_C_Booking
 }

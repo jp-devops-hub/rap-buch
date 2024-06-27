@@ -2,6 +2,7 @@
 @EndUserText.label: 'Travel Interface'
 define root view entity Z_I_TRAVEL
 as select from /dmo/travel
+composition[1..*] of Z_I_BOOKING as _Booking
 {
   key travel_id as TravelId,
   agency_id as AgencyId,
@@ -16,5 +17,7 @@ as select from /dmo/travel
   createdby as Createdby,
   createdat as Createdat,
   lastchangedby as Lastchangedby,
-  lastchangedat as Lastchangedat
+  lastchangedat as Lastchangedat,
+  
+  _Booking
 }

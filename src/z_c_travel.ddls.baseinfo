@@ -6,9 +6,14 @@
 "Z_I_TRAVEL"
 ],
 "ASSOCIATED":
-[],
+[
+"Z_C_BOOKING",
+"Z_I_BOOKING"
+],
 "BASE":
-[],
+[
+"Z_I_TRAVEL"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":
